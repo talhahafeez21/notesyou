@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/drawer"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+            <androidx.appcompat.widget.Toolbar
+                android:layout_height="?actionBarSize"
+                android:layout_width="match_parent"
+                android:theme="?actionBarTheme"
+                android:background="@color/black"
+                >
+
+            <TextView
+                android:text="Notes"
+                android:layout_gravity="center"
+                android:textSize="33sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_baseline_menu_24"
+                android:tint="@color/white"
+                android:layout_height="wrap_content">
+
+            </ImageView>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:text="+"
+                android:textSize="21sp"
+                android:textColor="@color/white"
+
+                android:layout_gravity="end"
+                android:onClick="newNote"
+                android:layout_height="wrap_content">
+
+            </Button>
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_marginTop="?actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <SearchView
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/search"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="57dp" />
+    </RelativeLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/noteListView"
+
+        android:layout_marginTop="111dp"
+        android:layout_height="fill_parent"/>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_gravity="start"
+        android:id="@+id/nav"
+        app:menu="@menu/navmenu"
+        android:layout_height="match_parent">
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+
+
+
